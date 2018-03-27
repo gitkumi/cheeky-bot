@@ -7,12 +7,10 @@ body {
    height: 100vh;
 }
 
-.footer {
-    position: absolute;
-    width: 100%;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    padding: 1rem;
-    text-align: center;
+.half {
+   height: 30vh;
+}
+
+.unclickable {
+  pointer-events: none;
 }
