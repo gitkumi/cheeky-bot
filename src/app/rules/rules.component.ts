@@ -10,6 +10,7 @@ export class RulesComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    console.log('Nothing here but robots!')
   }
 
 }
