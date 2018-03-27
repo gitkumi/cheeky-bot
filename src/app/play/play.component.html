@@ -1,0 +1,51 @@
+<section id="play" class="whole">
+  <div class="container">
+    <div class="row text-center">
+      <div class="col" *ngIf="playing">
+        <span>{{currentNumber}}</span>
+      </div>
+    </div>
+    <br/>
+    <div class="row text-center">
+      <div class="col" *ngIf="playing">
+          <span *ngIf="playerTurn">Your turn.</span>
+          <span *ngIf="robotTurn">Please wait while the robot think.</span>
+      </div>
+    </div>
+    <br/>
+    <div class="row" *ngIf="!playing">
+      <div class="offset-md-5 col-md-2 col-sm-12">
+        <button (click)="play()" class="btn btn-lg btn-danger btn-block">
+          PLAY
+        </button>
+      </div>
+    </div>
+    <br/>
+    <div class="row" *ngIf="playing">
+      <div class="col">
+        <button (click)="submit()"
+        [ngClass]="{'disabled':robotTurn}"
+        class="btn btn-lg btn-danger btn-block"
+        *ngIf="playing">
+          1
+        </button>
+      </div>
+      <div class="col">
+        <button (click)="submit()"
+        [ngClass]="{'disabled':robotTurn}"
+        class="btn btn-lg btn-danger btn-block"
+        *ngIf="playing">
+          2
+        </button>
+      </div>
+      <div class="col">
+        <button (click)="submit()"
+        [ngClass]="{'disabled':robotTurn}"
+        class="btn btn-lg btn-danger btn-block"
+        *ngIf="playing">
+          3
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
